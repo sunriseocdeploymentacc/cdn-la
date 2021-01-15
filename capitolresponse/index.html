@@ -112,7 +112,7 @@ return false;
 
     </head>
     <body>
-        <p id='2743fdfsf' style="font-family: 'Source Sans Pro', sans-serif;font-weight: 700;">ENTER YOUR ADDRESS TO FIND YOUR REP</p>
+        <p id='2743fdfsf' style="font-family: 'Source Sans Pro', sans-serif;font-weight: 700;">Enter your address to find your representative</p>
             <form name="search" onsubmit="return searchForOfficial()">
        <input type="search" id="address" class="form-control" placeholder="123 Sesame Street, New York City, New York 10024" />
        <input type="submit" name="Submit" value="Submit"/>
@@ -125,7 +125,8 @@ return false;
           var placesAutocomplete = places({
             appId: 'pl6QLQMCVD4K',
             apiKey: 'abf696987b36efdb1faf5e5ed40fb702',
-            container: document.querySelector('#address')
+            container: document.querySelector('#address'),
+            countries: ['us','AS',"GU","MP","PR","UM",'VI']
           });
         
           var $address = document.querySelector('#address-value')
